@@ -2,9 +2,8 @@ import streamlit as st
 from openai import OpenAI
 import os
 
-# Replace the hardcoded strings with these:
-PASSWORD = os.environ.get("MY_CHAT_PASSWORD")
-API_KEY = os.environ.get("DEEPINFRA_TOKEN")
+PASSWORD = st.secrets["MY_CHAT_PASSWORD"]
+API_KEY = st.secrets["DEEPINFRA_TOKEN"]
 BASE_URL = "https://api.deepinfra.com/v1/openai"
 
 def check_password():
