@@ -59,7 +59,7 @@ if check_password():
     icon_col, spacer_col = st.columns([1, 4])
 
     with icon_col:
-        st.image("logo.png", use_container_width=True)
+        st.image("logo-login.png", use_container_width=True)
 
     # The title or chat starts below or to the right
     st.title("Astrid Habla")
