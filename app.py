@@ -27,7 +27,7 @@ def check_password():
         col1, col2, col3 = st.columns([1, 1, 1])
         with col2:
             # Put your icon filename here (e.g., logo.png)
-            st.image("image/logo-login.png", width=300)
+            st.image("image/logo-login.png",  width=300)
 
         st.markdown("<h3 style='text-align: center;'>Astrid Habla</h3>", unsafe_allow_html=True)
 
