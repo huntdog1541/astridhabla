@@ -1,19 +1,10 @@
 import streamlit as st
-from dotenv import load_dotenv
 from openai import OpenAI
 import os
 
-# This loads the variables from the .env file
-load_dotenv()
-
-# Now os.getenv will find them
-PASSWORD = os.getenv("MY_CHAT_PASSWORD")
-API_KEY = os.getenv("DEEPINFRA_TOKEN")
-
-# 1. Configuration
-# PASSWORD = os.environ.get("MY_CHAT_PASSWORD", "test123")
-# Use DeepInfra or your local Ollama address
-# API_KEY = os.environ.get("DEEPINFRA_TOKEN", "your_token")
+# Replace the hardcoded strings with these:
+PASSWORD = os.environ.get("MY_CHAT_PASSWORD")
+DEEPINFRA_TOKEN = os.environ.get("DEEPINFRA_TOKEN")
 BASE_URL = "https://api.deepinfra.com/v1/openai"
 
 def check_password():
