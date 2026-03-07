@@ -55,14 +55,11 @@ if check_password():
             }
         ]
 
-    # Create a 1:4 ratio so the logo stays small and on the left
-    icon_col, spacer_col = st.columns([1, 4])
-
-    with icon_col:
+    with st.sidebar:
         st.image("image/logo-login.png", use_container_width=True)
-
-    # The title or chat starts below or to the right
-    st.title("Astrid Habla")
+        st.title("Astrid Habla")
+        st.markdown("---")
+        st.write("Asistente personal de IA")
 
     # Display chat (Hide the system message from the user)
     for message in st.session_state.messages:
