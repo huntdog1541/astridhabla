@@ -4,7 +4,7 @@ import os
 
 # Replace the hardcoded strings with these:
 PASSWORD = os.environ.get("MY_CHAT_PASSWORD")
-DEEPINFRA_TOKEN = os.environ.get("DEEPINFRA_TOKEN")
+API_KEY = os.environ.get("DEEPINFRA_TOKEN")
 BASE_URL = "https://api.deepinfra.com/v1/openai"
 
 def check_password():
