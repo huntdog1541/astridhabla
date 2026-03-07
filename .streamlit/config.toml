@@ -1,0 +1,21 @@
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+# Primary accent color (Buttons, etc.)
+primaryColor = "#F63366"
+
+# The main background
+backgroundColor = "#0E1117"
+
+# Sidebar and input widgets background
+secondaryBackgroundColor = "#262730"
+
+# Text color
+textColor = "#FAFAFA"
+
+# Font (optional)
+font = "sans serif"
