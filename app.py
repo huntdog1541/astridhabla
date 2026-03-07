@@ -17,12 +17,22 @@ PASSWORD = st.secrets["MY_CHAT_PASSWORD"]
 API_KEY = st.secrets["DEEPINFRA_TOKEN"]
 BASE_URL = "https://api.deepinfra.com/v1/openai"
 
+
 def check_password():
     if "authenticated" not in st.session_state:
         st.session_state["authenticated"] = False
+
     if not st.session_state["authenticated"]:
+        # 1. Center the icon/logo
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            # Put your icon filename here (e.g., logo.png)
+            st.image("image/logo.png", width=100)
+
+        st.markdown("<h3 style='text-align: center;'>Astrid Habla</h3>", unsafe_allow_html=True)
+
         user_pass = st.text_input("Contraseña", type="password")
-        if st.button("Entrar"):
+        if st.button("Entrar", use_container_width=True):
             if user_pass == PASSWORD:
                 st.session_state["authenticated"] = True
                 st.rerun()
