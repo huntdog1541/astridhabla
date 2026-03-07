@@ -2,6 +2,17 @@ import streamlit as st
 from openai import OpenAI
 import os
 
+# CSS to hide the top-right toolbar and the footer
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            .stAppDeployButton {display:none;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 PASSWORD = st.secrets["MY_CHAT_PASSWORD"]
 API_KEY = st.secrets["DEEPINFRA_TOKEN"]
 BASE_URL = "https://api.deepinfra.com/v1/openai"
