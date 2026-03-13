@@ -51,7 +51,7 @@ if check_password():
         <style>
         .stApp {{
             background-image: url("data:image/webp;base64,{bg_image}");
-            background-size: cover;
+            background-size: 50%;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
