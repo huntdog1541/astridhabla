@@ -42,6 +42,25 @@ def check_password():
     return True
 
 if check_password():
+    # Background image after login
+    import base64
+    with open("image/Astrid_Hofferson.webp", "rb") as img_file:
+        bg_image = base64.b64encode(img_file.read()).decode()
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/webp;base64,{bg_image}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.title("Mi Asistente IA")
 
     client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
